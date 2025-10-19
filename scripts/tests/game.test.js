@@ -94,6 +94,10 @@ describe("gameplay works correctly", () => {
         lightsOn(game.currentGame[0]);
         expect(button.classList).toContain("light");
     });
+    test("should toggle turnInProgress to true", () => {
+        showTurns();
+        expect(game.turnInProgress).toBe(true);
+    });
     test("showTurns should update game.turnNumber", () => {
         game.turnNumber = 42;
         showTurns();
